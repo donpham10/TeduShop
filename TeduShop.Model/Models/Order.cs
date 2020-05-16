@@ -9,25 +9,25 @@ namespace TeduShop.Model.Models
     public class Order
     {
         [Key]
-        public int ID {set; get;}
+        public int ID { set; get; }
         [Required]
-        public string CustomerName {set; get;}
+        public string CustomerName { set; get; }
         [Required]
-   public string CustomerAddress {set; get;}
-   public string CustomerEmail {set; get;}
-   [Required]
-     public string CustomerMobile {set; get;}
-       public string CustomerMessenger {set; get;}
-       public DateTime CreateDate{set; get;}
+        public string CustomerAddress { set; get; }
+        public string CustomerEmail { set; get; }
+        [Required]
+        public string CustomerMobile { set; get; }
+        public string CustomerMessenger { set; get; }
+        public DateTime CreateDate { set; get; }
 
-       public string CreateBy   {set; get;}
+        public string CreateBy { set; get; }
 
-       public string PaymentMethod {set; get;}
-       [Required]
-       public string PaymentStatus{set; get;}
-       public bool? Status {set; get;}
-       
+        public string PaymentMethod { set; get; }
+        [Required]
+        public string PaymentStatus { set; get; }
+        public bool? Status { set; get; }
+
         [ForeignKey("OrderID")]
-         public virtual OrderDetail MenuGroup{get;set;}
+        public virtual OrderDetail OrderDetail { get; set; }
     }
 }
