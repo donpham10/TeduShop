@@ -29,7 +29,7 @@ namespace TeduShop.Model.Models {
     public string PaymentStatus { set; get; }
     public bool? Status { set; get; }
 
-    [ForeignKey ("OrderID")]
-    public virtual OrderDetail MenuGroup {set; get;}
+    [ForeignKey("OrderID")]
+        public virtual OrderDetail MenuGroup { set;get;}
   }
 }
