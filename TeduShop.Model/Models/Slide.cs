@@ -13,17 +13,17 @@ namespace TeduShop.Model.Models
     public class Slide : Auditable
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         [Required]
-        public string Name { set; get; } 
+        [MaxLength(256)]
+        public string Name { set; get; }
+        [MaxLength(256)]
         public string Description { set; get; }
-        [Required]
+        [MaxLength(256)]
         public string Image { set; get; }
-        [Required]
+        [MaxLength(256)]
         public string URL { set; get; }
-        public int DisplayOder { set; get; }
-
-
-
+        public int? DisplayOder { set; get; }
     }
 }

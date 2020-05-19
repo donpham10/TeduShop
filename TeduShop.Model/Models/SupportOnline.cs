@@ -13,13 +13,22 @@ namespace TeduShop.Model.Models
     public class SupportOnline : Auditable
     {
         [Key]
-        int ID { set; get; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { set; get; }
+        [MaxLength(50)]
         public string Name { set; get; }
+        [MaxLength(50)]
         public string Department { set; get; }
+        [MaxLength(50)]
         public string Skype { set; get; }
+        [MaxLength(50)]
         public string Mobile { set; get; }
+        [MaxLength(50)]
         public string Email { set; get; }
+        [MaxLength(50)]
         public string Yahoo { set; get; }
+        [MaxLength(50)]
         public string FaceBook { set; get; }
+        public int? DisplayOrder { set; get; }
     }
 }
