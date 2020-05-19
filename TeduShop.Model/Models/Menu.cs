@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace TeduShop.Model.Models
-{
-    [Table(" Menus")]
-    public class Menu
-    {
+namespace TeduShop.Model.Models {
+    [Table (" Menus")]
+    public class Menu {
         [Key]
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [MaxLength(50)]
         public int ID { get; set; }
@@ -24,7 +23,6 @@ namespace TeduShop.Model.Models
         public string Target { get; set; }
         [Required]
         public bool Status { get; set; }
-
 
     }
 }

@@ -1,8 +1,6 @@
 using System;
-namespace TeduShop.Model.Abstract
-{
-    public interface IAuditable
-    {
+namespace TeduShop.Model.Abstract {
+    public interface IAuditable {
         string MetaKeyword { set; get; }
         string MetaDescription { set; get; }
         DateTime? CreatedDate { get; set; }
