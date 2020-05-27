@@ -7,22 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
-{
-    [Table("Slides")]
-    public class Slide : Auditable
-    {
+namespace TeduShop.Model.Models {
+    [Table ("Slides")]
+    public class Slide : Auditable {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated (DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
+
         [Required]
-        [MaxLength(256)]
+        [MaxLength (256)]
         public string Name { set; get; }
-        [MaxLength(256)]
+
+        [MaxLength (256)]
         public string Description { set; get; }
-        [MaxLength(256)]
+
+        [MaxLength (256)]
         public string Image { set; get; }
-        [MaxLength(256)]
+
+        [MaxLength (256)]
         public string URL { set; get; }
         public int? DisplayOder { set; get; }
     }
