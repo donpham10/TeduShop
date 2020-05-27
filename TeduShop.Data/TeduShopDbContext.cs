@@ -12,6 +12,7 @@ namespace TeduShop.Data
     {
         public TeduShopDbContext():base("TeduShopConnection")
         {
+            // tao bang cha khong duoc include bang con
             this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<Footer> Footers { set; get; }
@@ -32,10 +33,10 @@ namespace TeduShop.Data
         public DbSet<SystempConfig> SystempConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
-
+        // ghi de khoi tao entity farmwork
         protected override void OnModelCreating(DbModelBuilder Builder)
         {
-            base.OnModelCreating(Builder);
+           
         }
     }
 }
