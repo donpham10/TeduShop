@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeduShop.Model.Models
-{
-    [Table("VisitorStatistics")]
-    public class VisitorStatistic
-    {
+namespace TeduShop.Model.Models {
+    [Table ("VisitorStatistics")]
+    public class VisitorStatistic {
         [Key]
         public Guid ID { set; get; }
+
         [Required]
         public DateTime VisitedDate { set; get; }
-        [MaxLength(256)]
+
+        [MaxLength (256)]
         public string IDAddress { set; get; }
 
     }
