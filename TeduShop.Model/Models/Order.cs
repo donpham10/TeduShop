@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
@@ -28,8 +29,6 @@ namespace TeduShop.Model.Models {
     [Required]
     public string PaymentStatus { set; get; }
     public bool? Status { set; get; }
-
-    [ForeignKey("OrderID")]
-        public virtual OrderDetail MenuGroup { set;get;}
-  }
+        public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
+    }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TeduShop.Model.Models
 {
     [Table("SystempConfigs")]
-    public class SystempConfig
+    public class SystemConfig
     {
         [Key]
         public int Id { get; set; }

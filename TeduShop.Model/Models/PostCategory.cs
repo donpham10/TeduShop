@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TeduShop.Model.Models
 {
     [Table("PostCatagories")]
-    public class PostCatagory
+    public class PostCategory
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

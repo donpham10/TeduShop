@@ -22,7 +22,7 @@ namespace TeduShop.Data
         public DbSet<OrderDetail> OrderDetails { set; get; }
         public DbSet<Page> Pages { set; get; }
         public DbSet<Post> Post { set; get; }
-        public DbSet<PostCatagory> PostCatagorys { set; get; }
+        public DbSet<PostCategory> PostCatagorys { set; get; }
         public DbSet<PostTag> PostTags { set; get; }
 
         public DbSet<Product> Products { set; get; }
@@ -30,7 +30,7 @@ namespace TeduShop.Data
         public DbSet<ProductTag> ProductTags { set; get; }
         public DbSet<Slide> Slides { set; get; }
         public DbSet<SupportOnline> SupportOnlines { set; get; }
-        public DbSet<SystempConfig> SystempConfigs { set; get; }
+        public DbSet<SystemConfig> SystempConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         // ghi de khoi tao entity farmwork
