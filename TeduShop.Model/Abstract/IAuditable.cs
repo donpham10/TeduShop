@@ -1,3 +1,4 @@
+// dam bao thuc hien nhieu thao tac tren cung mot giao dich
 using System;
 namespace TeduShop.Model.Abstract {
     public interface IAuditable {

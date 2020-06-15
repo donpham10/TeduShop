@@ -1,31 +1,31 @@
-using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
-{
-    [Table("ProductCategories")]
+namespace TeduShop.Model.Models {
+    [Table ("ProductCategories")]
 
-    public class ProductCategory : Auditable
-    {
+    public class ProductCategory : Auditable {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated (DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
+
         [Required]
-        [MaxLength(256)]
+        [MaxLength (256)]
         public string Name { get; set; }
+
         [Required]
-        [MaxLength(256)]
+        [MaxLength (256)]
         public string Alias { get; set; }
-        [MaxLength(500)]
+
+        [MaxLength (500)]
         public string Description { set; get; }
         public int? ParentID { set; get; }
 
-      
         public int? DisplayOrder { set; get; }
 
-        [MaxLength(256)]
+        [MaxLength (256)]
         public string Image { set; get; }
         public bool? HomeFlag { set; get; }
 
