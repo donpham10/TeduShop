@@ -36,6 +36,6 @@ namespace TeduShop.Model.Models
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCatagory { get; set; }
        
-        public virtual IEnumerable<PostTag> PostTag { get; set; }
+        public virtual IEnumerable<PostTag> PostTags { get; set; }
     }
 }
