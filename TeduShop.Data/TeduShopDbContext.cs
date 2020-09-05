@@ -33,6 +33,7 @@ namespace TeduShop.Data
         public DbSet<SystemConfig> SystempConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
+        public DbSet<Error> Errors { set; get; }
         // ghi de khoi tao entity farmwork
         protected override void OnModelCreating(DbModelBuilder Builder)
         {
