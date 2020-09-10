@@ -12,9 +12,9 @@ namespace TeduShop.Data.Repositories
     public interface IErrorRepository : IRepository<Error>
     {
     }
-    public class ErrorRepositoRy: RepositoryBase<Error>,IErrorRepository
+    public class ErrorRepository: RepositoryBase<Error>,IErrorRepository
     {
-        public ErrorRepositoRy(IDbFactory dbFactory):base(dbFactory)
+        public ErrorRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }
