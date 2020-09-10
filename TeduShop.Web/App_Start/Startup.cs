@@ -42,6 +42,8 @@ namespace TeduShop.Web.App_Start
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces().InstancePerRequest();
 
+
+
             //Sẻvices
             builder.RegisterAssemblyTypes(typeof(PostCategoryServices).Assembly)
                 .Where(t => t.Name.EndsWith("Services"))
