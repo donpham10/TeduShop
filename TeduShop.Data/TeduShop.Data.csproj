@@ -41,6 +41,14 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -70,6 +78,18 @@
     <Compile Include="Migrations\202008191324194_InitialAddAudiTable_PostCategory.cs" />
     <Compile Include="Migrations\202008191324194_InitialAddAudiTable_PostCategory.designer.cs">
       <DependentUpon>202008191324194_InitialAddAudiTable_PostCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009110657476_Intergrate-AspnetIdentity.cs" />
+    <Compile Include="Migrations\202009110657476_Intergrate-AspnetIdentity.designer.cs">
+      <DependentUpon>202009110657476_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009110944457_ChangeKey.cs" />
+    <Compile Include="Migrations\202009110944457_ChangeKey.designer.cs">
+      <DependentUpon>202009110944457_ChangeKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009110949041_ChangeKey1.cs" />
+    <Compile Include="Migrations\202009110949041_ChangeKey1.designer.cs">
+      <DependentUpon>202009110949041_ChangeKey1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +125,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008191324194_InitialAddAudiTable_PostCategory.resx">
       <DependentUpon>202008191324194_InitialAddAudiTable_PostCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009110657476_Intergrate-AspnetIdentity.resx">
+      <DependentUpon>202009110657476_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009110944457_ChangeKey.resx">
+      <DependentUpon>202009110944457_ChangeKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009110949041_ChangeKey1.resx">
+      <DependentUpon>202009110949041_ChangeKey1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
