@@ -220,6 +220,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\app.routes.js" />
+    <Content Include="App\components\products\product.routes.js" />
+    <Content Include="App\components\products\ProductAddCOntroller.js" />
+    <Content Include="App\components\products\ProductAddView.html" />
+    <Content Include="App\components\products\productEditController.js" />
+    <Content Include="App\components\products\ProductEditView.html" />
+    <Content Include="App\components\products\productListController.js" />
+    <Content Include="App\components\products\ProductListView.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -1028,6 +1037,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\spa\App.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -1124,10 +1134,19 @@
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\components\orders\" />
+    <Folder Include="App\components\product_categories\" />
+    <Folder Include="App\components\roles\" />
+    <Folder Include="App\components\users\" />
+    <Folder Include="App\shared\foodter\" />
+    <Folder Include="App\shared\navigation\" />
+    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\Admin\" />
+    <Folder Include="Assets\Admin\css\" />
+    <Folder Include="Assets\Admin\img\" />
+    <Folder Include="Assets\Admin\js\" />
+    <Folder Include="Assets\Admin\libs\" />
     <Folder Include="Assets\client\" />
-    <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
