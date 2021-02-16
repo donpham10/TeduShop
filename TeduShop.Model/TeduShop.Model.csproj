@@ -62,7 +62,10 @@
   <ItemGroup>
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ApplicationUser.cs" />
+=======
+>>>>>>> bai12
     <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Footer.cs" />
     <Compile Include="Models\Menu.cs" />
