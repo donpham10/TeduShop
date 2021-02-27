@@ -6,9 +6,8 @@ using System.Web.Http;
 using TeduShop.Model.Models;
 using TeduShop.Web.Infrastrcture.Core;
 using TeduShop.Web.Models;
-using TeduSHop.Service;
 using TeduShop.Web.Infrastrcture.Extensions;
-
+using TeduSHop.Service;
 
 namespace TeduShop.Web.Api
 {

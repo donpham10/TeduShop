@@ -35,15 +35,11 @@ namespace TeduShop.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Errors { set; get; }
-<<<<<<< HEAD
 
         public static TeduShopDbContext Create()
         {
             return new TeduShopDbContext();
         }
-
-=======
->>>>>>> bai12
         // ghi de khoi tao entity farmwork
         //cau hinh 
         protected override void OnModelCreating(DbModelBuilder Builder)
