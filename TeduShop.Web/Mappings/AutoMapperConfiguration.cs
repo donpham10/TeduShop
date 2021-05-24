@@ -10,6 +10,7 @@ namespace TeduShop.Web.Mappings
 {
     public class AutoMapperConfiguration
     {
+        [Obsolete]
         public static void Configure()
         {
             Mapper.CreateMap<Post, PostViewModel>();

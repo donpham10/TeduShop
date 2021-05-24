@@ -216,7 +216,7 @@
     <Content Include="App\app.js" />
     <Content Include="App\app.routes.js" />
     <Content Include="App\components\products\product.routes.js" />
-    <Content Include="App\components\products\ProductAddCOntroller.js" />
+    <Content Include="App\components\products\ProductAddController.js" />
     <Content Include="App\components\products\ProductAddView.html" />
     <Content Include="App\components\products\productEditController.js" />
     <Content Include="App\components\products\ProductEditView.html" />
@@ -1171,9 +1171,9 @@
     <Folder Include="App\components\product_categories\" />
     <Folder Include="App\components\roles\" />
     <Folder Include="App\components\users\" />
+    <Folder Include="App\shared\directive\" />
     <Folder Include="App\shared\foodter\" />
     <Folder Include="App\shared\navigation\" />
-    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Admin\css\" />
     <Folder Include="Assets\Admin\img\" />

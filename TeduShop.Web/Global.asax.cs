@@ -8,6 +8,7 @@ namespace TeduShop.Web
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        [System.Obsolete]
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
