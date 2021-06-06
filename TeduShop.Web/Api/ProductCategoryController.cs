@@ -16,7 +16,7 @@ namespace TeduShop.Web.Api
     public class ProductCategoryController : ApiControllerBase
     {
         IProductCategoryServices _productCategoryService;
-        private static IErrorServices errorService;
+        //private static IErrorServices errorService;
 
         public ProductCategoryController(IErrorServices errorService, IProductCategoryServices productCategoryService) 
             : base(errorService)

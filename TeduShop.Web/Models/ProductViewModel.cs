@@ -7,6 +7,7 @@ namespace TeduShop.Web.Models
 {
     public class ProductViewModel
     {
+
         public int ID { set; get; }
 
         public string Name { set; get; }
@@ -36,8 +37,6 @@ namespace TeduShop.Web.Models
         public DateTime? UpdateDate { set; get; }
         public string UpdateBy { set; get; }
 
-        public virtual ProductCategoryViewModel ProductCatagory { get; set; }
-
-        public virtual IEnumerable<ProductTagViewModel> ProductTags { get; set; }
+        public virtual ProductCategoryViewModel ProductCatagory { set; get; }
     }
 }

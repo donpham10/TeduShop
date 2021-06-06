@@ -57,14 +57,14 @@ namespace TeduShop.Web.Infrastrcture.Extensions
 
 
            postTag.PostID = postTagViewModel.PostID;
-            postTag.TagID = postTagViewModel.TagID;
-            postTag.MetaKeyword = postTagViewModel.MetaKeyword;
-            postTag.MetaDescription = postTagViewModel.MetaDescription;
-            postTag.Status = postTagViewModel.Status;
-            postTag.CreatedDate = postTagViewModel.CreatedDate;
-            postTag.CreatedBy = postTagViewModel.CreatedBy;
-            postTag.UpdateDate = postTagViewModel.UpdateDate;
-            postTag.UpdateBy = postTagViewModel.UpdateBy;
+           postTag.TagID = postTagViewModel.TagID;
+            //postTag.MetaKeyword = postTagViewModel.MetaKeyword;
+            //postTag.MetaDescription = postTagViewModel.MetaDescription;
+            //postTag.Status = postTagViewModel.Status;
+            //postTag.CreatedDate = postTagViewModel.CreatedDate;
+            //postTag.CreatedBy = postTagViewModel.CreatedBy;
+            //postTag.UpdateDate = postTagViewModel.UpdateDate;
+            //postTag.UpdateBy = postTagViewModel.UpdateBy;
         }
         public static void UpdateTag(this Tag tag, TagViewModel tagViewModel)
         {

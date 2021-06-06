@@ -198,6 +198,7 @@
   <ItemGroup>
     <Compile Include="Api\AccountController.cs" />
     <Compile Include="Api\PostCategoryController.cs" />
+    <Compile Include="Api\ProductCategoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -216,6 +217,9 @@
     <Compile Include="Models\PostCategoryViewModel.cs" />
     <Compile Include="Models\PostTagViewModel.cs" />
     <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\ProductTagViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\TagViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -230,7 +234,11 @@
     <Content Include="App\components\products\ProductEditView.html" />
     <Content Include="App\components\products\productListController.js" />
     <Content Include="App\components\products\ProductListView.html" />
+    <Content Include="App\components\product_categories\productcategories.module.js" />
+    <Content Include="App\components\product_categories\productCategoryListController.js" />
+    <Content Include="App\components\product_categories\productCategoryListView.html" />
     <Content Include="App\shared\Modules\teduShop.Common.js" />
+    <Content Include="App\shared\services\apiService.js" />
     <Content Include="Assets\Admin\css\adminlte.css" />
     <Content Include="Assets\Admin\css\adminlte.min.css" />
     <Content Include="Assets\Admin\css\alt\adminlte.components.css" />
@@ -1222,7 +1230,9 @@
     <Content Include="Assets\Admin\libs\bootstrap\dist\webfonts\fa-solid-900.ttf" />
     <Content Include="Assets\Admin\libs\bootstrap\dist\webfonts\fa-solid-900.woff" />
     <Content Include="Assets\Admin\libs\bootstrap\dist\webfonts\fa-solid-900.woff2" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1234,12 +1244,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\components\orders\" />
-    <Folder Include="App\components\product_categories\" />
     <Folder Include="App\components\roles\" />
     <Folder Include="App\components\users\" />
     <Folder Include="App\shared\foodter\" />
     <Folder Include="App\shared\navigation\" />
-    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\client\" />
   </ItemGroup>

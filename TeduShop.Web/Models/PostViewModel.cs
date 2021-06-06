@@ -34,8 +34,8 @@ namespace TeduShop.Web.Models
         public DateTime? UpdateDate { set; get; }
         public string UpdateBy { set; get; }
 
-        public virtual PostCategoryViewModel PostCatagory { get; set; }
+        public virtual PostCategoryViewModel PostCatagory { set; get; }
 
-        public virtual IEnumerable<PostTagViewModel> PostTags { get; set; }
+        public virtual IEnumerable<PostTagViewModel> PostTags { set; get; }
     }
 }

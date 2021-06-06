@@ -31,7 +31,6 @@ namespace TeduShop.Web.Models
         public string CreatedBy { set; get; }
         public DateTime? UpdateDate { set; get; }
         public string UpdateBy { set; get; }
-
-        public virtual IEnumerable<PostViewModel> Posts { set; get; }
+      
     }
 }
