@@ -212,6 +212,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastrcture\Core\ApiControllerBase.cs" />
+    <Compile Include="Infrastrcture\Core\PaginationSet.cs" />
     <Compile Include="Infrastrcture\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\PostCategoryViewModel.cs" />
@@ -237,6 +238,8 @@
     <Content Include="App\components\product_categories\productcategories.module.js" />
     <Content Include="App\components\product_categories\productCategoryListController.js" />
     <Content Include="App\components\product_categories\productCategoryListView.html" />
+    <Content Include="App\shared\directives\pagerDirective.html" />
+    <Content Include="App\shared\directives\pagerDirective.js" />
     <Content Include="App\shared\Filters\StatusFilter.js" />
     <Content Include="App\shared\Modules\teduShop.Common.js" />
     <Content Include="App\shared\services\apiService.js" />

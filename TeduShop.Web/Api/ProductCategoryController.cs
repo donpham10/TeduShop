@@ -15,22 +15,36 @@ namespace TeduShop.Web.Api
     [RoutePrefix("Api/ProductCategory")]
     public class ProductCategoryController : ApiControllerBase
     {
-        IProductCategoryServices _productCategoryService;
+        private IProductCategoryServices _productCategoryService;
         //private static IErrorServices errorService;
 
-        public ProductCategoryController(IErrorServices errorService, IProductCategoryServices productCategoryService) 
+        public ProductCategoryController(IErrorServices errorService, IProductCategoryServices productCategoryService)
             : base(errorService)
         {
             this._productCategoryService = productCategoryService;
         }
+
         [Route("getall")]
-        public HttpResponseMessage getAll(HttpRequestMessage request)
+        public HttpResponseMessage getAll(HttpRequestMessage request, int page, int pageSize = 20)
         {
+            int totalRow = 0;
             return CreateHttpResponse(request, () =>
             {
                 var model = _productCategoryService.GetAll();
-                var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
-                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                totalRow = model.Count();
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
+
+                var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
+
+                var paginationSet = new PaginationSet<ProductCategoryViewModel>()
+                {
+                    Items = responseData,
+                    Page = page,
+                    TotalCount = totalRow,
+                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
+                };
+
+                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
                 return response;
             });
         }
