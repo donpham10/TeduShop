@@ -25,12 +25,12 @@ namespace TeduShop.Web.Api
         }
 
         [Route("getall")]
-        public HttpResponseMessage getAll(HttpRequestMessage request, int page, int pageSize = 20)
+        public HttpResponseMessage getAll(HttpRequestMessage request,string filter, int page, int pageSize = 20)
         {
             int totalRow = 0;
             return CreateHttpResponse(request, () =>
             {
-                var model = _productCategoryService.GetAll();
+                var model = _productCategoryService.GetAll(filter);
                 totalRow = model.Count();
                 var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
 

@@ -7,12 +7,18 @@
         $scope.page = 0;
         $scope.pagesCount = 0;
         $scope.getProductCategories = getProductCategories;
-        function getProductCategories(page) {
+        $scope.filter = '';
+        $scope.search = search;
+        function search() {
+           getProductCategories();
+        }
+        function getProductCategories(filter,page) {
             page = page || 0;
             var config = {
                 params: {
+                    filter: $scope.filter,
                     page: page,
-                    pageSize: 2
+                    pageSize: 20
                 }
             };
             apiService.get('/Api/ProductCategory/getall', config,
