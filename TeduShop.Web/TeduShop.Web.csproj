@@ -243,6 +243,7 @@
     <Content Include="App\shared\Filters\StatusFilter.js" />
     <Content Include="App\shared\Modules\teduShop.Common.js" />
     <Content Include="App\shared\services\apiService.js" />
+    <Content Include="App\shared\services\notificationService.js" />
     <Content Include="Assets\Admin\css\adminlte.css" />
     <Content Include="Assets\Admin\css\adminlte.min.css" />
     <Content Include="Assets\Admin\css\alt\adminlte.components.css" />
@@ -895,6 +896,10 @@
     <Content Include="Assets\Admin\libs\slimScroll\examples\style.css" />
     <Content Include="Assets\Admin\libs\slimScroll\jquery.slimscroll.js" />
     <Content Include="Assets\Admin\libs\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.css" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.js" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.min.css" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.min.js" />
     <Content Include="Global.asax" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
@@ -1355,6 +1360,13 @@
     <Content Include="Assets\Admin\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Assets\Admin\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\Admin\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\Admin\libs\toastr\.bower.json" />
+    <Content Include="Assets\Admin\libs\toastr\bower.json" />
+    <Content Include="Assets\Admin\libs\toastr\LICENSE" />
+    <Content Include="Assets\Admin\libs\toastr\README.md" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.js.map" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.less" />
+    <Content Include="Assets\Admin\libs\toastr\toastr.scss" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

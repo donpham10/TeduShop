@@ -1,8 +1,8 @@
 ﻿(function (app) {
     app.controller('producCategorytListController', producCategorytListController);
-    producCategorytListController.$inject = ['$scope', 'apiService']
+    producCategorytListController.$inject = ['$scope', 'apiService', 'notificationService']
 
-    function producCategorytListController($scope, apiService) {
+    function producCategorytListController($scope, apiService, notificationService) {
         $scope.productCategories = [];
         $scope.page = 0;
         $scope.pagesCount = 0;
@@ -23,6 +23,12 @@
             };
             apiService.get('/Api/ProductCategory/getall', config,
                 function (result) {
+                    if (result.data.TotalCount == 0)
+                    {
+                        notificationService.displayWarning('Không có bản ghi nào được tìm thấy!!!');
+                    } else {
+                        notificationService.displaySuccess('Đã tìm thấy ' + result.data.TotalCount+' bản ghi.')
+                    }
                     $scope.productCategories = result.data.Items;
                     $scope.page = result.data.Page;
                     $scope.pagesCount = result.data.TotalPages;
