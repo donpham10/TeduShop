@@ -236,6 +236,8 @@
     <Content Include="App\components\products\productListController.js" />
     <Content Include="App\components\products\ProductListView.html" />
     <Content Include="App\components\product_categories\productcategories.module.js" />
+    <Content Include="App\components\product_categories\productCategoriesAddController.js" />
+    <Content Include="App\components\product_categories\productCategoriesAddView.html" />
     <Content Include="App\components\product_categories\productCategoryListController.js" />
     <Content Include="App\components\product_categories\productCategoryListView.html" />
     <Content Include="App\shared\directives\pagerDirective.html" />
