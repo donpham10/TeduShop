@@ -51,6 +51,20 @@ namespace TeduShop.Web.Api
             });
         }
 
+        [Route("getbyid/{id:int}")]
+        [HttpGet]
+        public HttpResponseMessage GetById(HttpRequestMessage request,int ID)
+        {
+            
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _productCategoryService.GetById(ID);
+                var responseData = Mapper.Map<ProductCategory,ProductCategoryViewModel>(model);
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                return response;
+            });
+        }
+
         [Route("getallParentId")]
         [HttpGet]
         public HttpResponseMessage getAll(HttpRequestMessage request)
@@ -81,12 +95,40 @@ namespace TeduShop.Web.Api
                 else
                 {
                     var newProductCategory = new ProductCategory();
+                    newProductCategory.CreatedDate = DateTime.Now;
                     newProductCategory.UpdateProductCategory(ProductCatelogyVm);
                     _productCategoryService.Add(newProductCategory);
                     _productCategoryService.SaveChange();
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(newProductCategory);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                    
+                }
+                return response;
+            });
+
+        }
+        [Route("update")]
+        [HttpPut]
+        [AllowAnonymous]
+        public HttpResponseMessage Update(HttpRequestMessage request, ProductCategoryViewModel ProductCatelogyVm)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var dbProductCategory = _productCategoryService.GetById(ProductCatelogyVm.ID);
+                    dbProductCategory.UpdateProductCategory(ProductCatelogyVm);
+                    dbProductCategory.CreatedDate = DateTime.Now;
+                    _productCategoryService.Update(dbProductCategory);
+                    _productCategoryService.SaveChange();
+                    var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(dbProductCategory);
+                    response = request.CreateResponse(HttpStatusCode.Created, responseData);
+
                 }
                 return response;
             });

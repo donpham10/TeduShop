@@ -8,7 +8,8 @@
     function apiService($http, notificationService) {
         return {
             get: get,
-            post:post
+            post: post,
+            put:put
         }
         function post(url, data, success, failure) {
             $http.post(url, data).then(function (result) {
@@ -21,6 +22,19 @@
                 failure(error);
             });
         }
+
+         function put(url, data, success, failure) {
+            $http.put(url, data).then(function (result) {
+                success(result);
+            }, function (error) {
+                if (error.status == '401')
+                {
+                    notificationService.displayError('Authenticate is requied')
+                }
+                failure(error);
+            });
+        }
+
         function get(url, params, success, failure) {
             $http.get(url, params).then(function (result) {
                 success(result);

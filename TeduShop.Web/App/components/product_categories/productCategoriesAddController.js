@@ -1,14 +1,22 @@
 ﻿(function (app) {
     app.controller('productCategoriesAddController', productCategoriesAddController);
-    productCategoriesAddController.$inject = ['$scope', 'apiService', 'notificationService','$state']
+    productCategoriesAddController.$inject = ['$scope', 'apiService', 'notificationService','$state','$stateParams']
 
-    function productCategoriesAddController($scope, apiService, notificationService, $state) {
+    function productCategoriesAddController($scope, apiService, notificationService, $state,$stateParams) {
         $scope.productCategory = {
             CreatedDate: new Date(),
             Status:true
         }
         $scope.parentCategories = [];
         $scope.AddProductCategory = AddProductCategory;
+
+        function loadProductCategoryDetail(){
+            apiService.get('Api/ProductCategory/'+ $stateParams.id,null,function Success(result){
+                $scope.productCategory = result.data;
+            },function Error(error){
+                notificationService.displayError(error.data);
+            });
+        }
 
         function AddProductCategory()
         {
@@ -28,5 +36,5 @@
             });
         }
         loadParentCategory();
-    }
-})(angular.module('teduShop.product_categories'));
+        }
+    })(angular.module('teduShop.product_categories'));
